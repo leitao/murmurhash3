@@ -6,7 +6,7 @@
 .section ".toc"
 
 ETCH_LABEL(C0):
-.double 0xdfdfdfdfdfdfdfdf
+	.quad 0xdfdfdfdfdfdfdfdf
 
 ETCH_SECTION(hash_string_i_unaligned_crc)
 .globl  ETCH_NAME(hash_string_i_unaligned_crc)
@@ -17,11 +17,6 @@ ETCH_NAME(hash_string_i_unaligned_crc):
 	CFI(startproc)
 	// r3 = arKey
 	// r4 = keyLen
-
-	xor 2, 2, 2
-	xor 10, 10, 2
-
-	ld 10, .toc@C0
 
 	li 9, 0
 CFI(endproc)
