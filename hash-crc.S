@@ -18,6 +18,7 @@ ETCH_NAME(hash_string_i_unaligned_crc):
 	// r3 = arKey
 	// r4 = keyLen
 
+	// TODO: Create the ppc64le code here
 	li 9, 0
 CFI(endproc)
 
